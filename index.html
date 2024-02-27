@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sistema de Control</title>
+
+    <!-- Fuentes personalizadas para esta plantilla -->
+    
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Estilos personalizados para esta plantilla -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Envoltura de la página -->
+    <div id="wrapper">
+
+        <!-- Barra lateral -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Barra Lateral Logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php" style="margin-top: -10px;">
+    <div class="sidebar-brand-icon rotate-n-15">
+    </div>
+    <div class="sidebar-brand-text mx-3">
+        <img src="img/logo.png" alt="Logo Escuela" style="max-height: 200px; margin-top: 15px;">
+
+            <!-- Separador -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Elemento de navegación - Panel de control -->
+            <li class="nav-item active">
+                <a class="nav-link" href="sistema_de_control.php">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Inicio</span></a>
+            </li>
+
+            <!-- Separador -->
+            <hr class="sidebar-divider">
+
+            <!-- Encabezado -->
+            <div class="sidebar-heading">
+                Interfaz
+            </div>
+
+            <!-- Elemento de navegación - Menú desplegable de Docentes -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Inscripcion</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Usuarios</h6>
+                        <a class="collapse-item" href="ins_nuevo_ingreso.php">Nuevo Ingreso</a>
+                        <a class="collapse-item" href="ins_regular.php">Regular</a>
+                        <a class="collapse-item" href="ins_ver_estudiantes.php">Ver Estudiantes</a>
+                    </div>
+                </div>
+            </li>
+
+        <!-- Elemento de navegación - Menú desplegable de Alumnos -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseReports"
+                aria-expanded="true" aria-controls="collapseReports">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Reportes</span>
+            </a>
+            <div id="collapseReports" class="collapse" aria-labelledby="headingReports"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="utilities-color.html">Matricula</a>
+                    <a class="collapse-item" href="utilities-color.html">Constancia de Estudio</a>
+                    <a class="collapse-item" href="utilities-border.html">Const. de Inscripcion</a>
+                    <a class="collapse-item" href="utilities-animation.html">Constancia de Retiro</a>
+                </div>
+            </div>
+        </li>
+
+        <!-- Elemento de navegación - Menú desplegable de Configuración -->
+<!--         <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig"
+                aria-expanded="true" aria-controls="collapseConfig">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Configuración</span>
+            </a>
+            <div id="collapseConfig" class="collapse" aria-labelledby="headingConfig"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="utilities-color.html">Periodo Escolar</a>
+                    <a class="collapse-item" href="utilities-color.html">Aulas</a>
+                    <a class="collapse-item" href="utilities-border.html">Grado</a>
+                    <a class="collapse-item" href="utilities-animation.html">Seccion</a>
+                </div>
+            </div>
+        </li> -->
+
+        <!-- Elemento de navegación - Menú desplegable de Usuarios -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers"
+                aria-expanded="true" aria-controls="collapseUsers">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Usuarios</span>
+            </a>
+            <div id="collapseUsers" class="collapse" aria-labelledby="headingUsers"
+                data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="utilities-color.html">Ver Usuarios</a>
+<!--                     <a class="collapse-item" href="utilities-border.html">Secretaria</a>
+                    <a class="collapse-item" href="utilities-animation.html">Docente</a> -->
+                </div>
+            </div>
+        </li>
+
+            <!-- Separador -->
+            <hr class="sidebar-divider">
+
+            <!-- Encabezado -->
+            <div class="sidebar-heading">
+                Complementos
+            </div>
+
+            <!-- Elemento de navegación - Menú desplegable de Páginas -->
+
+            <!-- Elemento de navegación - Gráficos -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Configuarion</span></a>
+
+            <!-- Separador -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Botón de alternar barra lateral (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Mensaje Final de la barra lateral -->
+            <div class="sidebar-card d-none d-lg-flex">
+
+                <p class="text-center mb-2"><strong></strong></p>
+                <a class="" href=""></a>
+            </div>
+
+        </ul>
+        <!-- Fin de la barra lateral -->
+
+        <!-- Envoltura del contenido -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Contenido principal -->
+            <div id="content">
+
+                <!-- Barra superior -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Botón de alternar barra lateral (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Barra de navegación superior -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Elemento de navegación - Menú desplegable de búsqueda (Solo visible en XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Menú desplegable - Búsqueda -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Buscar..." aria-label="Buscar"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Elemento de navegación - Información de usuario -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/usuario.png">
+                            </a>
+                            <!-- Menú desplegable - Información de usuario -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                
+                <?php
+include("database/db.php");
+
+// Realizar consulta para obtener el número de estudiantes
+$consulta_estudiantes = $conexion->query("SELECT COUNT(*) as total_estudiantes FROM estudiantes_nuevo_ingreso");
+
+// Verificar si la consulta fue exitosa
+if (!$consulta_estudiantes) {
+    // Si hay un error en la consulta, muestra un mensaje de error
+    die("Error en la consulta: " . $conexion->error);
+}
+
+// Obtener el resultado de la consulta
+$fila = $consulta_estudiantes->fetch_assoc();
+$total_estudiantes = $fila['total_estudiantes'];
+?> 
+
+<!-- Contenido de la página -->
+
+<style>
+    /* Estilos para los botones */
+    .custom-btn {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    /* Estilos adicionales al pasar el cursor sobre los botones */
+    .custom-btn:hover {
+        transform: scale(1.05);
+    }
+
+    .custom-link {
+        text-decoration: none !important;
+        color: inherit;
+    }
+
+    .custom-link:hover {
+        text-decoration: none !important;
+        color: inherit;
+    }
+</style>
+
+<div class="container-fluid">
+
+    <!-- Encabezado de la página -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Bienvenido al Sistema de Control Escolar</h1>
+        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generar Informe</a>
+    </div>
+
+    <!-- Fila de contenido -->
+    <div class="row">
+
+        <!-- Recuadro de Grados -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2 custom-btn custom-link">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 custom-link">
+                                Asignaturas</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">8</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recuadro de Estudiantes -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="ins_ver_estudiantes.php" class="card border-left-info shadow h-100 py-2 custom-btn custom-link">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1 custom-link">Estudiantes</div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800 custom-link">
+                                        <?php echo $total_estudiantes; ?>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar"
+                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300 btn-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Recuadro de Profesores -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2 custom-btn custom-link">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1 custom-link">
+                                Profesores</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recuadro de Usuarios -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2 custom-btn custom-link">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1 custom-link">
+                                Usuarios</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">6</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Supongamos que $total_estudiantes contiene el número total de estudiantes
+    // Puedes ajustar esto según cómo obtienes la cantidad de estudiantes en tu PHP
+
+    // Mapea el rango del número de estudiantes al rango de la barra de progreso
+    function map(value, inMin, inMax, outMin, outMax) {
+        return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
+    }
+
+    // Obtén el elemento de la barra de progreso
+    var progressBar = document.querySelector('.progress-bar');
+
+    // Ajusta el valor del ancho de la barra de progreso según el número de estudiantes
+    function updateProgressBar(totalEstudiantes) {
+        var minValue = 0;  // Mínimo número de estudiantes
+        var maxValue = 50;  // Máximo número de estudiantes (ajústalo según tus necesidades)
+
+        // Calcula el porcentaje de estudiantes en relación con el rango de la barra de progreso
+        var percentage = map(totalEstudiantes, minValue, maxValue, 0, 100);
+
+        // Establece el ancho de la barra de progreso
+        progressBar.style.width = percentage + '%';
+    }
+
+    // Llama a la función con el valor actual de estudiantes (puedes ajustar este valor)
+    updateProgressBar(<?php echo $total_estudiantes; ?>);
+</script>
+<!-- Fin del Contenido Principal -->
+
+</div>
+<!-- Fin del Contenedor de Contenido -->
+
+<!-- Pie de página -->
+<footer class="sticky-footer bg-white">
+    <div class="container my-auto">
+        <div class="copyright text-center my-auto">
+            <span>Escuela Basica &copy; Carlos Alberto Pelayo 2024</span>
+        </div>
+    </div>
+</footer>
+<!-- Fin del Pie de página -->
+
+</div>
+<!-- Fin del Contenedor de Página -->
+
+<!-- Botón de Desplazamiento Superior -->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Modal de Cierre de Sesión -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <!-- ... (resto del código del modal) ... -->
+</div>
+
+<!-- JavaScript principal de Bootstrap -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Complemento principal de JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Scripts personalizados para todas las páginas -->
+<script src="js/sb-admin-2.min.js"></script>
+
+<!-- Complementos específicos de la página -->
+<script src="vendor/chart.js/Chart.min.js"></script>
+
+<!-- Scripts personalizados específicos de la página -->
+<script src="js/demo/chart-area-demo.js"></script>
+<script src="js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>
